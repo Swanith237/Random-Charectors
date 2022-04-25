@@ -1,10 +1,10 @@
 import random
 import time
+from charectors import char
 
 print("Starting...")
 time.sleep(1)
 
-char =["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "-", "_", "+", "=", "\\", "/", "|", ":", ";", "'", "\"", "?", ".", ",", "()", "[]", "{}", "<>", " "]
 print("Charectors: \n", char)
 
 while True:
