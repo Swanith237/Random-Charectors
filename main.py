@@ -1,23 +1,38 @@
-import random
-import time
-import sys
-from charectors import char
-import pyautogui
+def program():
+    import random
+    import time
+    import sys
+    from charectors import char
+    import pyautogui
 
-print("Starting...")
-time.sleep(1)
+    print("This program is going to be continuously printing random charectors into the terminal.")
 
-print("Charectors: \n", char)
-print()
+    def conf():
+        confirm = input("Are you sure you want to continue? (y/n): ")
 
-while True:
-    randomized_symbol = random.choice(char)
-    time.sleep(0.1)
-    print(randomized_symbol)
+        if confirm == "y":
+            print("Starting...")
+            time.sleep(1)
 
-    pos = pyautogui.position()
-    #print(pos)
-    if pos == ("Point(x=0, y=0)"):
-        sys.exit()
-    else:
-        pass
+            print("Charectors: \n", char)
+            print()
+
+            while True:
+                randomized_symbol = random.choice(char)
+                time.sleep(0.1)
+                print(randomized_symbol)
+
+                pos = pyautogui.position()
+                #print(pos)
+                if pos == ("Point(x=0, y=0)"):
+                    sys.exit()
+                else:
+                    pass
+
+        elif confirm == "n":
+            print("Okay, Bye!")
+            time.sleep(2)
+            sys.exit()
+
+    conf()
+program()
