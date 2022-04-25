@@ -9,12 +9,13 @@ def program():
     from charectors import char
 
     colorama.init()
-    print("This program is going to be continuously printing random charectors into the terminal.")
-    confirm = input("Are you sure you want to continue? (y/n): ")
+    print("This program is going to be continously Printing Random Charectors into the Terminal.")
 
     clearConsole = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 
-    def conf():
+    def confirmation():
+        confirm = input("Are you Sure you Want to Continue? (y/n): ")
+
         if confirm == "y":
             print()
             print("Okay, Starting...")
@@ -44,7 +45,7 @@ def program():
             print(f"{Style.BRIGHT}Made by: Swanith")
             time.sleep(0.5)
             print(f"{Style.BRIGHT}Discord: FightKnight#6129")
-            print(f"{Style.BRIGHT}Github: Swanith237")
+            print(f"{Style.BRIGHT}Github: Swanith237 - https://github.com/Swanith237/")
 
             time.sleep(10)
             clearConsole()
@@ -54,7 +55,7 @@ def program():
         else:
             print()
             print("Please enter 'y' or 'n'!")
-            conf()
+            confirmation()
 
-    conf()
+    confirmation()
 program()
